@@ -1,303 +1,87 @@
-# ETERNAL DOOM (ENG)
 
-A frenetic top-down shooter where you take on the slayer's unending fight against the forces of hell.
-Survive as long as possible by fending off endless waves of demons from the depths of hell.
-You'll be provided some of the most lethal and iconic weapons from the franchise to aid in your crusade against the unique hellborn monstrosities you will face,
-each and every single one of them with different abilities and archetypes.
+  # ETERNAL DOOM
 
-### RESOURCES USED IN THE PROJECT
----
+  *A frenetic top-down shooter where you take on the Slayer's unending fight against the forces of hell.*
 
-### 1. Textures
+Survive as long as possible by fending off endless waves of demons from the depths of hell. You'll be provided with some of the most lethal and iconic weapons from the franchise to aid in your crusade against unique hellborn monstrosities, each possessing different abilities and archetypes.
 
-- **Main Sprite Database:**  
-  https://www.spriters-resource.com/ms_dos/doomdoomii/  
-- **Secondary Sprite Database:**  
-  https://spritedatabase.net/game/760  
+The game is an arcade-style, top-down spin on the established *Doom* formula, developed in C++ using the SFML graphics library. This project is built upon a robust Object-Oriented architecture, implementing a custom Entity Management System, dynamic enemy AI tracking, procedural loot generation, and fluid 360-degree mouse-aim combat mechanics.
 
-**Note:** Although most of the resources are not originally mine (almost all), I made small modifications (recoloring, resizing, etc.) to better integrate them. The image `chaingun_proj2.png` is 100% my own creation.
+[![Eternal Doom Gameplay](https://img.youtube.com/vi/xh_VsYCisdw/maxresdefault.jpg)](https://youtu.be/xh_VsYCisdw)
+## ✨ Key Features
 
----
+* **Entity Management System:** A robust Object-Oriented Programming (OOP) architecture that efficiently handles the lifecycle of all game entities (Player, Enemies, Projectiles, Pickups). Updating and rendering are centralized.
+* **Dynamic Enemy AI:** Enemies possess unique abilities and specific tracking/attacking behaviors, relentlessly focusing on eliminating the player.
+* **Complex Arsenal System:** Equip iconic weapons (Plasma Rifle, Rocket Launcher, Chaingun, BFG9000), each featuring distinct firing mechanics, projectile types, fire rates, and ammo consumption.
+* **Custom Sprite Animation Engine:** A delta-time-based animation system that dynamically binds frames to entity states. It is specifically tailored to faithfully imitate the iconic visual feedback and retro animation pacing of the original *Doom* source material.
+* **Mouse-Aim Combat:** Precision 360-degree shooting directed exactly at the cursor's coordinates.
+* **Procedural Loot & Pickups:** Upon death, enemies have a calculated chance to drop between 0 and 3 pickups (Health, Armor, Ammo) to reward aggressive play and keep the combat flow engaging.
+* **Game State Manager:** Seamless handling of game states, ensuring smooth transitions between the Main Menu, Active Gameplay, Pause Menu, and Game Over screen.
+* **Integrated Audio System:** Real-time, independent control over the dynamic soundtrack and sound effects (SFX).
 
-### 2. Backgrounds
+## 🎮 Gameplay Mechanics
 
-- **Main menu screen:**  
-  https://www.reddit.com/r/Doom/comments/g5tzyz/doom_1993_wallpaper_upscaled_to_4k_by_telamon618/  
-- **Pause screen:**  
-  https://wall.alphacoders.com/big.php?i=1316641  
-- **Game over screen:**  
-  Found in the first link under the **Textures** section  
-- **In-game background image:**  
-  Created by me using original textures found here:  
-  https://www.textures-resource.com/ms_dos/doom/texture/2236/
+* **The Player:** Spawns with full health, full armor, and maximum ammo for each weapon. Movement is constrained within the game window. The primary goal is to survive and rack up the highest score possible.
+* **The Enemies:** Different enemy types yield varying points upon being killed, reflecting their threat level and abilities. They will attempt to eliminate the player making use of their abilities.
+* **Game Over Condition:** The run ends when the player's health reaches 0. The final screen displays the total score achieved and offers the option to restart the crusade or exit to the desktop.
 
----
+## 📥 How to Download & Play
 
-### 3. Sounds
+1. Navigate to the **[Releases](../../releases)** tab on the right side of this repository.
+2. Download the latest `.zip` archive for your operating system.
+3. Extract the contents to a folder of your choice.
+4. Run the executable file to start the game.
+5. RIP AND TEAR
 
-- **Pickup sound:**  
-  https://www.myinstants.com/en/instant/half-life-health-charger-sound-9722/  
-- **Doom II sound archive (all used sounds except the one above):**  
-  https://www.sounds-resource.com/ms_dos/doomdoomii/sound/7956/  
+## ⌨️ Controls
 
-**Note:** In some cases, I renamed the audio files to make them easier to use in the project.
+### 🕹️ Menus
+* `ENTER` - Start the game (Main Menu) / Restart the game (Game Over)
+* `P` - Pause / Unpause the game
+* `ESC` - Exit the game (Game Over)
 
----
+### 🏃 Movement
+* `W` - Move Up
+* `A` - Move Left
+* `S` - Move Down
+* `D` - Move Right
 
-### 4. Font
+### 🔫 Combat & Arsenal
+* `LEFT MOUSE BUTTON` - Shoot (fires towards the cursor's position)
+* `1` - Equip Plasma Rifle
+* `2` - Equip Rocket Launcher
+* `3` - Equip Chaingun
+* `4` - Equip BFG9000
 
-- **Amazdoom (Dafont):**  
-  https://www.dafont.com/amazdoom.font
+### 🎵 Audio Control
+* `M` - Toggle music On/Off
+* `-` (Minus) - Lower music volume
+* `=` (Equal) - Raise music volume
 
----
+## 💻 Technologies Used
 
-### 5. Music
+* **C++** - Core programming language.
+* **[CMake](https://github.com/Kitware/CMake/tree/master))** - Cross-platform build system utilized to configure the project, manage dependencies, and streamline the compilation process.
+* **[SFML 3.0.0](https://github.com/SFML/SFML/tree/3.0.0)** (Zlib) - Simple and Fast Multimedia Library used for rendering, window management, and input.
+* **[OpenAL](https://openal-soft.org/)** (LGPL) - Audio library (distributed as a shared library due to licensing).
 
-- **RTPN (official channel):**  
-  https://www.youtube.com/c/RTPNOfficial  
+## 🎨 Credits & Resources
 
-- **Individual tracks:**  
-  - **"ClownIsWe"** – https://youtu.be/O_t53q1vq04?si=2FH-A2cUkDl4MPdd  
-  - **"Release"** – https://youtu.be/9eluFZIpmOs?si=7n4JkVRFhmjsuVv9  
-  - **"Decay"** – https://youtu.be/kK2k_W0nKdE?si=DOrr21NnaC4txMia  
-  - **"Sustain"** – https://youtu.be/Si1Uw_nmjMk?si=GVJ_bZnHOvO-cyRM  
-  - **"Hive"** – https://youtu.be/u2lNDShmM-k?si=nnj2fomv5TuoudJ6  
-  - **"Uprizing I"** – https://youtu.be/-y_5KVimqxI?si=_wJM9OshbkQSid2t
+While the codebase and logic are my own, this project utilizes community resources that I have edited and adapted (recoloring, resizing, etc.) to fit the game's vision. 
+*Note: The image `chaingun_proj2.png` is my own creation.*
 
----
-### 6. Documentation Used
+### Graphics & Textures
+* **Main Sprite Database:** [Spriters Resource - Doom & Doom II](https://www.spriters-resource.com/ms_dos/doomdoomii/)
+* **Secondary Sprite Database:** [Sprite Database - Doom](https://spritedatabase.net/game/760)
+* **Main Menu Background:** [Reddit - Doom 1993 Upscaled](https://www.reddit.com/r/Doom/comments/g5tzyz/doom_1993_wallpaper_upscaled_to_4k_by_telamon618/)
+* **Pause Screen Background:** [AlphaCoders Wallpaper](https://wall.alphacoders.com/big.php?i=1316641)
+* **In-Game Background:** Generated by me using original textures from [Textures Resource](https://www.textures-resource.com/ms_dos/doom/texture/2236/).
 
-- **Official SFML 3.0 Documentation:**  
-   https://www.sfml-dev.org/documentation/3.0.0/  
-- **Resources provided by the course instructor:**  
-   https://github.com/mcmarius/poo/tree/master
+### Audio
+* **Pickup SFX:** [Half-Life Health Charger](https://www.myinstants.com/en/instant/half-life-health-charger-sound-9722/)
+* **Doom II SFX Archive:** [Sounds Resource](https://www.sounds-resource.com/ms_dos/doomdoomii/sound/7956/)
+* **Music:** Soundtrack by **RTPN** ([Official YouTube Channel](https://www.youtube.com/c/RTPNOfficial)).
+    * Tracks used: *[ClownIsWe](https://youtu.be/O_t53q1vq04)*, *[Release](https://youtu.be/9eluFZIpmOs)*, *[Decay](https://youtu.be/kK2k_W0nKdE)*, *[Sustain](https://youtu.be/Si1Uw_nmjMk)*, *[Hive](https://youtu.be/u2lNDShmM-k)*, *[Uprizing I](https://youtu.be/-y_5KVimqxI)*.
 
-**Note:** I've listed only these two sources, but in reality, I've used many others such as Stack Overflow posts to solve bugs, errors, and other issues. If I had mentioned absolutely everything, this README would have become ridiculously long and it's already big enough.
-
----
-
-### 7. Technologies Used
-- [SFML](https://github.com/SFML/SFML/tree/2.6.1) (Zlib)
-  - [OpenAL](https://openal-soft.org/) (LGPL): due to its license, it must be distributed as a shared library
----
-
-<br><br><br><br>
-### HOW THE GAME WORKS  
----
-- **Player:**
-  - Starts with full health, full armor, and maximum ammo for each weapon.
-  - Cannot leave the game window.
-  - Must survive as long as possible and eliminate as many enemies as possible.
-    
-- **Enemies:**
-  - Have unique abilities depending on their type.
-  - Upon death, there is a chance they drop pickups.
-  - When killed, the player earns points based on the enemy type.
-  - They will always attempt to kill the player.
-
-- **Pickups:**
-  - Spawn when an enemy dies.
-  - An enemy can drop between 0 and 3 pickups.
-  - There are 3 types, each restoring either health, armor, or ammo.
-
-- **End of the game:**
-  - When the player's health reaches 0, the game over screen appears with the final score and an option to exit the game.
----
-
-<br><br><br><br>
-### CONTROLS
----
-
-### 🕹️ Menus 🕹️
-- **Main menu**  
-  - `ENTER` to start the game
-
-- **Pause menu**  
-  - `P` to pause or unpause the game
-
-- **Game over screen**  
-  - `ENTER` to restart the game
-  - `ESC` to exit the game
-
----
-
-### 🎮 Movement 🎮
-- `W` to move up  
-- `D` to move right  
-- `S` to move down  
-- `A` to move left  
-
----
-
-### 🔫 Weapons 🔫
-- `1` to equip Plasma Rifle
-- `2` to equip Rocket Launcher
-- `3` to equip Chaingun  
-- `4` to equip BFG9000
-
----
-
-### 🖱️ Shooting 🖱️
-- `LEFT MOUSE BUTTON` to shoot
-
-**Note:** The weapon fires towards the cursor’s position  
-
----
-### 🎵 Music Control 🎵
-- `M` to toggle music on/off  
-- `-` (minus) to lower the music volume  
-- `=` (equal) to raise the music volume  
-
----
-<br><br><br><br>
-# ETERNAL DOOM (RO)
-
-Un shooter frenetic din perspectivă top-down, în care preiei lupta nesfârșită a Slayerului împotriva forțelor iadului.
-Supraviețuiește cât mai mult posibil, respingând valuri nesfârșite de demoni veniți din adâncurile iadului.
-Vei fi echipat cu unele dintre cele mai letale și iconice arme din franciză, care te vor ajuta în cruciada ta împotriva monstruozităților infernale unice pe care le vei înfrunta,
-fiecare dintre ele având abilități și arhetipuri diferite.
-
-### RESURSE UTILIZATE ÎN PROIECT
----
-
-### 1. Texturi
-
-- **Sprite Database principal:**  
-  https://www.spriters-resource.com/ms_dos/doomdoomii/  
-- **Sprite Database secundar:**  
-  https://spritedatabase.net/game/760  
-
-**Notă:** Deși majoritatea resurselor nu îmi aparțin (aproape toate), am adus mici modificări (recolorări, redimensionări etc.) pentru adaptare. Imaginea `chaingun_proj2.png` este 100% creația mea.
-
----
-
-### 2. Backgrounduri
-
-- **Ecranul de meniu principal:**  
-  https://www.reddit.com/r/Doom/comments/g5tzyz/doom_1993_wallpaper_upscaled_to_4k_by_telamon618/  
-- **Ecranul de pauză:**  
-  https://wall.alphacoders.com/big.php?i=1316641  
-- **Ecranul de game over:**  
-  Se găsește în primul link de la secțiunea **Texturi**.  
-- **Imaginea de fundal din joc:**  
-  Este creată de mine folosind texturi originale găsite aici:  
-  https://www.textures-resource.com/ms_dos/doom/texture/2236/
-
----
-
-### 3. Sunete
-
-- **Sunet pentru pickupuri:**  
-  https://www.myinstants.com/en/instant/half-life-health-charger-sound-9722/  
-- **Arhivă sunete Doom II (toate sunetele folosite, cu excepția celui de mai sus):**  
-  https://www.sounds-resource.com/ms_dos/doomdoomii/sound/7956/  
-
-**Notă:** Am redenumit fișierele audio în unele cazuri pentru o integrare mai ușoară în proiect.
-
----
-
-### 4. Font
-
-- **Amazdoom (Dafont):**  
-  https://www.dafont.com/amazdoom.font
-
----
-
-### 5. Muzică
-
-- **RTPN (canal oficial):**  
-  https://www.youtube.com/c/RTPNOfficial  
-
-- **Piese individuale:**  
-  - **„ClownIsWe”** – https://youtu.be/O_t53q1vq04?si=2FH-A2cUkDl4MPdd  
-  - **„Release”** – https://youtu.be/9eluFZIpmOs?si=7n4JkVRFhmjsuVv9  
-  - **„Decay”** – https://youtu.be/kK2k_W0nKdE?si=DOrr21NnaC4txMia  
-  - **„Sustain”** – https://youtu.be/Si1Uw_nmjMk?si=GVJ_bZnHOvO-cyRM  
-  - **„Hive”** – https://youtu.be/u2lNDShmM-k?si=nnj2fomv5TuoudJ6  
-  - **„Uprizing I”** – https://youtu.be/-y_5KVimqxI?si=_wJM9OshbkQSid2t  
----
-### 6. Documentație folosită
-
-- **Documentația oficială SFML 3.0:**  
-   https://www.sfml-dev.org/documentation/3.0.0/  
-- **Resurse oferite de cadrul didactic:**  
-   https://github.com/mcmarius/poo/tree/master  
-  
-**Notă:** Am menționat doar aceste două resurse, însă în realitate am folosit și altele, precum postări de pe Stack Overflow pentru a rezolva probleme, erori și diverse situații. Dacă ar fi fost să menționez absolut tot, mi-ar fi ieșit un README incredibil de lung și deja e destul de mare.
-  
----
-### 7. Tehnologii folosite
-- [SFML](https://github.com/SFML/SFML/tree/2.6.1) (Zlib)
-  - [OpenAL](https://openal-soft.org/) (LGPL): din cauza licenței, trebuie distribuită ca shared library
-
----
-<br><br><br><br>
-### CUM FUNCȚIONEAZĂ JOCUL  
----
-- **Jucătorul:**
-  - Se naște cu viața și armura la maximum și cu muniția maximă pentru fiecare armă.
-  - Nu poate ieși din fereastră.
-  - Trebuie să supraviețuiască cât mai mult timp și să elimine cât mai mulți inamici.
-    
-- **Inamicii:**
-  - Au abilități unice, specifice fiecărui tip de inamic.
-  - La moarte, există o șansă să genereze pickupuri.
-  - La moarte, în funcție de tipul de inamic, jucătorul primește un anumit punctaj.
-  - Vor încerca întotdeauna să omoare jucătorul.
-
-- **Pickupuri:**
-  - Se generează la moartea unui inamic.
-  - Un inamic poate genera între 0 și 3 pickupuri.
-  - Există 3 tipuri, fiecare regenerând fie viață, fie armură, fie muniție.
-
-- **Sfârșitul jocului:**
-  - Când viața jucătorului scade la 0, se afișează meniul de sfârșit, cu punctajul obținut și opțiunea de a închide jocul. 
----
-<br><br><br><br>
-### COMENZI
----
-
-### 🕹️ Meniuri 🕹️
-- **Meniu principal**  
-  - `ENTER` pentru a începe jocul
-
-- **Meniu pauză**  
-  - `P` pentru a pune în pauză jocul sau pentru a ieși din pauză
-
-- **Meniu de sfârșit**  
-  - `ENTER` pentru a reîncepe jocul
-  - `ESC` pentru a opri jocul
-
----
-
-### 🎮 Deplasare 🎮
-- `W` pentru a te mișca în sus  
-- `D` pentru a te mișca spre dreapta  
-- `S` pentru a te mișca în jos  
-- `A` pentru a te mișca spre stânga  
-
----
-
-### 🔫 Arsenal 🔫
-- `1` pentru a echipa Plasma Rifle  
-- `2` pentru a echipa Rocket Launcher  
-- `3` pentru a echipa Chaingun  
-- `4` pentru a echipa BFG9000
-
----
-
-### 🖱️ Tragere 🖱️
-- `MOUSE STÂNG` pentru a trage
-
-**Notă:** arma trage în punctul în care este situat cursorul
-
----
-
-### 🎵 Controlul muzicii 🎵
-- `M` pentru a activa/dezactiva muzica  
-- `-` (minus) pentru a reduce volumul muzicii  
-- `=` (egal) pentru a crește volumul muzicii  
-
----
-
-![](https://media.giphy.com/media/dAuSK5SmxZyWe1hYJO/giphy.gif?cid=ecf05e47jdvnq60fl6o9sj2ggiun6wc3ebdo7aczwuqq7xmn&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+### Fonts
+* **Amazdoom:** Available on [DaFont](https://www.dafont.com/amazdoom.font)
