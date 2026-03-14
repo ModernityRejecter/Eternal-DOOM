@@ -189,7 +189,7 @@ jobs:
       - name: Configure CMake
         uses: ./.github/actions/configure-cmake
         with:
-          custom_flags: ${{ matrix.cmake_flags }}
+          custom_flags: ${{ matrix.cmake_flags }} -DCMAKE_POLICY_VERSION_MINIMUM=3.5
           warnings_as_errors: 'ON'
 
       - name: Build
