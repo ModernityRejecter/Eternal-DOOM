@@ -7,7 +7,22 @@ Survive as long as possible by fending off endless waves of demons from the dept
 
 The game is an arcade-style, top-down spin on the established *Doom* formula, developed in C++ using the SFML graphics library. This project is built upon a robust Object-Oriented architecture, implementing a custom Entity Management System, dynamic enemy AI tracking, procedural loot generation, and fluid 360-degree mouse-aim combat mechanics.
 
+<!-- <p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxxY2FrMDgyNmlicmdzZHh2OHlpZnNneWxwOW5xeDBuaGo1emlwaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XII2i9OCm3n1czfgQ1/giphy.gif" />
+</p>
+
+<p align="center">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZweHY3cjc1dXR0eW1hdGlyemwzNGZ2dHdneW9mbGJybjA1czRqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DZLCVHDV0kBqXASj0O/giphy.gif" />
+</p> -->
+
+<p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxxY2FrMDgyNmlicmdzZHh2OHlpZnNneWxwOW5xeDBuaGo1emlwaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XII2i9OCm3n1czfgQ1/giphy.gif" width="48%" />
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZweHY3cjc1dXR0eW1hdGlyemwzNGZ2dHdneW9mbGJybjA1czRqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DZLCVHDV0kBqXASj0O/giphy.gif" width="48%" />
+</p>
+
+## 🎬 Gameplay Showcase
 [![Eternal Doom Gameplay](https://img.youtube.com/vi/xh_VsYCisdw/maxresdefault.jpg)](https://youtu.be/xh_VsYCisdw)
+
 ## ✨ Key Features
 
 * **Entity Management System:** A robust Object-Oriented Programming (OOP) architecture that efficiently handles the lifecycle of all game entities (Player, Enemies, Projectiles, Pickups). Updating and rendering are centralized.
